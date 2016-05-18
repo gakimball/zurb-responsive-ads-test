@@ -1,0 +1,30 @@
+<html>
+<head>
+  
+</head>
+<body>
+  
+<script>
+
+var o = {
+  detail: {
+    message: "Hello? Is it me you're looking for?",
+    time:    new Date()
+  },
+  bubbles: true,
+  cancelable: true
+}
+var e = new CustomEvent("ping", o);
+
+window.setInterval(function() {
+  window.dispatchEvent(e);
+}, 1000);
+
+window.addEventListener("ping", function() {
+  console.log("Hello? Is it me you're looking for?");
+});
+
+</script>
+
+</body>
+</html>
